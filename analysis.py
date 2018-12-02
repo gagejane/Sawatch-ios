@@ -19,12 +19,12 @@ def bar_weather(df):
     grouped = df.groupby(['weather_type'])['fuel_used'].mean()
     grouped.plot.bar()
     plt.xticks(rotation=50, horizontalalignment='right')
-    plt.xlabel('Bad Weather', weight='bold')
+    plt.xlabel('Weather Type', weight='bold')
     plt.ylabel('Liters of Fuel Used', weight='bold')
     plt.title('Liters of Fuel Used by Weather Type', weight='bold', fontsize=15)
     plt.tight_layout()
-    plt.show()
-    # plt.savefig('images/bad_weath')
+    # plt.show()
+    plt.savefig('images/weather')
 
 def bar_veh(df):
     grouped = df.groupby(['type'])['fuel_used'].mean()
@@ -32,10 +32,10 @@ def bar_veh(df):
     plt.xticks(rotation = 50, horizontalalignment='right')
     plt.xlabel('Vehicle Type', weight='bold')
     plt.ylabel('Liters of Fuel Used', weight='bold')
-    plt.title('Fuel used per Liter by Vehicle Type', weight='bold', fontsize=15)
+    plt.title('Liters of Fuel Used by Vehicle Type', weight='bold', fontsize=15)
     plt.tight_layout()
-    plt.show()
-    # plt.savefig('images/type')
+    # plt.show()
+    plt.savefig('images/veh_type')
 
 def clean(X):
     #turn booleans into integers
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     '''EDA'''
     vars = df[['fuel_used', 'kmph', 'celsius', 'altitude_delta', 'g_force', 'kml', 'kilometers']]
     # print(scatter(vars))
-    # print(bar_weather(df))
+    print(bar_weather(df))
     # print(bar_veh(df))
 
     '''Linear regression'''
@@ -138,9 +138,9 @@ if __name__ == '__main__':
     X_train, X_test, y_train, y_test = train_test_split(X, y)
 
     #Testing regression assumptions
-    print(VIF(clean(X_train)))
-    print(QQ(linear_train(clean(X_train), y_train)))
-    print(heteroscedasticity(linear_train(clean(X_train), y_train)))
+    # print(VIF(clean(X_train)))
+    # print(QQ(linear_train(clean(X_train), y_train)))
+    # print(heteroscedasticity(linear_train(clean(X_train), y_train)))
 
     #Run model on test data
-    print(linear_test(clean(X_test), y_test))
+    # print(linear_test(clean(X_test), y_test))
