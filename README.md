@@ -68,7 +68,7 @@ Data were split into training and testing data (75% and 25% of the full dataset,
 
 I assessed heteroscedasticity of the model residuals by plotting a scatter plot of the predict values and the results (see Figure 5). Residuals were reasonably homoscadastic, though there is evidence of some outliers in the model fit (i.e., scatter dots that notably deviates in the positive/negative direction of the y axis).
 
-** Figure 5. Scatterplot of Predicted Values Versus Residuals
+** Figure 5. Scatterplot of Predicted Values Versus Residuals**
 
 ![](images/Resids_Training.png)
 
@@ -87,7 +87,9 @@ As seen in Table 3, the training and tesing data both fit the model well (Adjust
 
 **Table 3. Fit statistics and Coefficients for Testing Versus Training Regression Models**
 
-|                <td colspan='5'><b><center> Training Model <td colspan='5'><b><center> Testing Model |
+![](images/Table3.jpg)
+
+<!-- |                <td colspan='5'><b><center> Training Model <td colspan='5'><b><center> Testing Model |
 |----------------|----------------|---------|----------|---------|---------|----------------|---------|----------|---------|---------|
 |                | <b><i>Adj. R-squared       | <b><i>b | <b><i>SE | <b><i>t | <b><i>p | <b><i>Adj. R-squared | <b><i>b | <b><i>SE | <b><i>t | <b><i>p |
 |                | .76            |         |          |         |         | .83            |         |          |         |         |
@@ -98,7 +100,7 @@ As seen in Table 3, the training and tesing data both fit the model well (Adjust
 | g_force        |                | .002    | <.001    | 4.94    | <.001   |                | .002    | .001     | 3.96    | <.001   |
 | kml            |                | <-.001  | <.001    | -16.12  | <.001   |                | <-.001  | <.001    | -11.22  | <.001   |
 | weather_type   |                | <-.001  | <.001    | -2.04   | .04     |                | <-.001  | <.001    | -0.72   | .47     |
-| vehicle_type   |                | .001    | <.001    | 5.37    | <.001   |                | <.001   | <.001    | 1.60    | .11     |           
+| vehicle_type   |                | .001    | <.001    | 5.37    | <.001   |                | <.001   | <.001    | 1.60    | .11     |            -->
 
 
 #### Future Directors
